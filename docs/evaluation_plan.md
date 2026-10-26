@@ -1,0 +1,1 @@
+Evaluate precision, recall, F1, false positives per metric-day, and detection delay on labeled history. Tune on validation data; report held-out test. Benchmark p50/p95/p99 latency, throughput, memory, error rate and recovery. No performance or accuracy claim is made without measurement.\n

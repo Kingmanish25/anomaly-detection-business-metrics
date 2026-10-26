@@ -1,0 +1,6 @@
+{
+  "project": "Anomaly Detection for Business Metrics",
+  "version": "1.0.0",
+  "python": "3.11+",
+  "data": "seeded synthetic"
+}

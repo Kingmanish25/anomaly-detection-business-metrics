@@ -1,0 +1,1 @@
+Stop compose, check out last known-good commit/image, rebuild and restart, verify health/docs/dashboard and a known fixture, compare errors, and record incident. Add database restore steps if persistence is introduced.\n

@@ -1,0 +1,8 @@
+groups:
+- name: anomaly-api
+  rules:
+  - alert: AnomalyApiDown
+    expr: up{job="business-metrics-anomaly-api"} == 0
+    for: 2m
+    labels:
+      severity: critical

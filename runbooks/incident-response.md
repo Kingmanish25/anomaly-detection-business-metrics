@@ -1,0 +1,1 @@
+API down: inspect container/logs/resources and recent changes; rollback if release-related. Anomaly flood: validate source, units, timestamps, and context before threshold changes. Suspected exposure: restrict access, rotate credentials, preserve audit logs, follow security policy.\n

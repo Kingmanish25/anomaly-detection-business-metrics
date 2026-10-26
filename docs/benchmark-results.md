@@ -1,0 +1,1 @@
+No benchmark has been run. Measure 100/1,000/10,000 records at concurrency 1/5/20 in the target environment and record p50/p95/p99, throughput, memory, errors, and hardware.\n

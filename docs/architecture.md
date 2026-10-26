@@ -1,0 +1,1 @@
+Validation -> past-only rolling detector -> FastAPI -> Streamlit. Prometheus-compatible counters and latency are exposed at /metrics. Invalid contracts return 422; wrong upload type 400; oversized upload 413. The MVP is stateless/in-memory.\n

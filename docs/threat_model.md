@@ -1,0 +1,1 @@
+Demo lacks auth, persistence, tenant isolation, and penetration testing. Do not expose publicly. Production mitigations: OIDC/RBAC, TLS, rate limits, managed secrets, least privilege, safe logs, dependency auditing, durable storage and backups.\n

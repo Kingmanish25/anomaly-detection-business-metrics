@@ -1,0 +1,1 @@
+Input: timestamp (ISO-8601 normalized to UTC), metric (nonblank string), value (finite number), optional source. Output: baseline, robust_z, is_anomaly, direction, severity. Synthetic data uses fixed NumPy seed; no personal data.\n

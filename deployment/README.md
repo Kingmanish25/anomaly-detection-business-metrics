@@ -1,0 +1,1 @@
+Docker Compose is the demo deployment. Production requires TLS, authentication, secret management, durable storage, backups, alerting, and load/security testing. Monitoring examples need Prometheus to be deployed.\n

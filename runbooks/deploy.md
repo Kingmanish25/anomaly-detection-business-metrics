@@ -1,0 +1,1 @@
+Copy .env.example to .env; run docker compose up --build -d; verify /health, /docs, dashboard upload, and /metrics. Do not publicly expose before auth, TLS, and storage controls are implemented.\n

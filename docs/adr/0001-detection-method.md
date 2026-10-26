@@ -1,0 +1,1 @@
+ADR 0001: use a past-only rolling median and MAD for explainable spike/drop detection. It is robust to isolated outliers but may miss seasonality, step changes, sparse series, and gradual drift. Validate against labeled history.\n
