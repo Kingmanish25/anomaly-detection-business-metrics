@@ -1,6 +1,9 @@
 import math
+
 import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field, field_validator
+
+
 class MetricRecord(BaseModel):
     model_config = ConfigDict(extra="forbid")
     timestamp: str

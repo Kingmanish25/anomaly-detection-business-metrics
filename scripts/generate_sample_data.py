@@ -1,5 +1,9 @@
 from pathlib import Path
-import numpy as np, pandas as pd
+
+import numpy as np
+import pandas as pd
+
+
 def main():
     rng=np.random.default_rng(20261025); dates=pd.date_range("2026-01-01",periods=120,freq="D",tz="UTC"); rows=[]
     for metric,base,noise,events in [("daily_orders",220,12,{31:110,78:-95}),("conversion_rate_pct",3.8,.18,{45:1.2,93:-1.1}),("revenue_usd",12500,650,{24:5200,84:-4700})]:

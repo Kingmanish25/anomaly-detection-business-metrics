@@ -1,12 +1,17 @@
-import io, logging, time
+import io
+import logging
+import time
+
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.responses import Response
-from pydantic import BaseModel, Field
 from prometheus_client import CONTENT_TYPE_LATEST, Counter, Histogram, generate_latest
+from pydantic import BaseModel, Field
+
 from anomaly_detection.config import settings
 from anomaly_detection.detector import detect_anomalies
 from anomaly_detection.validation import normalize_records
+
 log=logging.getLogger("anomaly_api")
 app=FastAPI(title="Business Metrics Anomaly Detection API",version="1.0.0")
 REQ=Counter("http_requests_total","HTTP requests",["method","path","status"])
@@ -42,7 +47,7 @@ def detect(payload: DetectRequest):
         return {"count":len(out),"anomaly_count":n,"results":out.to_dict("records")}
     except (ValueError,TypeError) as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
 @app.post("/ingest")
-async def ingest(file: UploadFile=File(...)):
+async def ingest(file: UploadFile=File(...)):  # noqa: B008
     if not file.filename or not file.filename.lower().endswith(".csv"): raise HTTPException(status_code=400,detail="upload a .csv file")
     content=await file.read(settings.max_upload_bytes+1)
     if len(content)>settings.max_upload_bytes: raise HTTPException(status_code=413,detail="upload too large")
