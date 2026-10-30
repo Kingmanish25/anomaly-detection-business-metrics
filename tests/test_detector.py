@@ -1,5 +1,9 @@
-import pandas as pd, pytest
+import pandas as pd
+import pytest
+
 from anomaly_detection.detector import detect_anomalies
+
+
 def test_spike_detected():
     vals=[100,101,99,100,102,98,101,1000]
     df=pd.DataFrame({"timestamp":pd.date_range("2026-01-01",periods=8,tz="UTC"),"metric":["x"]*8,"value":vals})

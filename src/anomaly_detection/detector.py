@@ -1,5 +1,7 @@
 import numpy as np
 import pandas as pd
+
+
 def detect_anomalies(frame, threshold=3.5, window=14, min_history=7):
     if threshold <= 0: raise ValueError("threshold must be greater than zero")
     if window < 2 or min_history < 2 or min_history > window: raise ValueError("require window >= min_history >= 2")
